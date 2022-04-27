@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "213110571064",
+    "project_id": "cookoverflow-b1ee4",
+    "storage_bucket": "cookoverflow-b1ee4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213110571064:android:607b08a844d0c36ae9a6cd",
+        "android_client_info": {
+          "package_name": "com.example.cookoverflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213110571064-cj6cn4tnhlrkm3o587c8te5qc75vg785.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLPvdY42dTkXITDtG1Y75L31kOlUWFpqs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213110571064-cj6cn4tnhlrkm3o587c8te5qc75vg785.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

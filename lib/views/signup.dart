@@ -17,8 +17,7 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
   TextEditingController emailEditingController = new TextEditingController();
   TextEditingController passwordEditingController = new TextEditingController();
-  TextEditingController usernameEditingController =
-  new TextEditingController();
+  TextEditingController usernameEditingController =  new TextEditingController();
 
   AuthService authService = new AuthService();
   DatabaseMethods databaseMethods = new DatabaseMethods();
