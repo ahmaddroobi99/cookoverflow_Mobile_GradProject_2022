@@ -1,14 +1,14 @@
-import 'package:cookoverflow/model/user.dart';
+import 'package:cookoverflow/model/user.dart' as u;
 import 'package:cookoverflow/views/conversationScreen.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:flutter/material.dart';
-// import 'package:google_sign_in/google_sign_in.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  User _userFromFirebaseUser(FirebaseUser user) {
-    return user != null ? User(uid: user.uid) : null;
+  u.User  _userFromFirebaseUser(auth.User user) {
+    return user != null ? u.User (uid: user.uid) : null;
   }
 
   Future signInWithEmailAndPassword(String email, String password) async {

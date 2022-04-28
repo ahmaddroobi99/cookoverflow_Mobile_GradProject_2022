@@ -31,7 +31,7 @@ class _SignInState extends State<SignIn> {
   bool isLoading = false;
 
   signIn() async {
-    if (formKey.currentState.validate()) {
+    if (formKey.currentState!.validate()) {
       setState(() {
         isLoading = true;
       });
@@ -83,7 +83,7 @@ class _SignInState extends State<SignIn> {
                     validator: (val) {
                       return RegExp(
                           r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                          .hasMatch(val)
+                          .hasMatch(val!)
                           ? null
                           : "Please Enter Correct Email";
                     },
@@ -94,7 +94,7 @@ class _SignInState extends State<SignIn> {
                   TextFormField(
                     obscureText: true,
                     validator: (val) {
-                      return val.length > 6
+                      return val!.length > 6
                           ? null
                           : "Enter Password 6+ characters";
                     },
