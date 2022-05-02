@@ -7,17 +7,18 @@ import 'package:cookoverflow/widget/widget.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {
-  final Function toggleView;
-  SignUp(this.toggleView);
+final Function toggleView;
+SignUp(this.toggleView);
 
-  @override
-  _SignUpState createState() => _SignUpState();
+@override
+_SignUpState createState() => _SignUpState();
 }
 
 class _SignUpState extends State<SignUp> {
   TextEditingController emailEditingController = new TextEditingController();
   TextEditingController passwordEditingController = new TextEditingController();
-  TextEditingController usernameEditingController =  new TextEditingController();
+  TextEditingController usernameEditingController =
+  new TextEditingController();
 
   AuthService authService = new AuthService();
   DatabaseMethods databaseMethods = new DatabaseMethods();
@@ -27,7 +28,7 @@ class _SignUpState extends State<SignUp> {
 
   singUp() async {
 
-    if(formKey.currentState!.validate()){
+    if(formKey.currentState.validate()){
       setState(() {
 
         isLoading = true;
@@ -57,9 +58,9 @@ class _SignUpState extends State<SignUp> {
   }
 
   @override
-  Widget build(BuildContext context)   {
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  appBarMain(context),
+      appBar: appBarMain(context),
       body: isLoading ? Container(child: Center(child: CircularProgressIndicator(),),) :  Container(
         padding: EdgeInsets.symmetric(horizontal: 24),
         child: Column(
@@ -73,7 +74,7 @@ class _SignUpState extends State<SignUp> {
                     style: simpleTextStyle(),
                     controller: usernameEditingController,
                     validator: (val){
-                      return val!.isEmpty || val.length < 3 ? "Enter Username 3+ characters" : null;
+                      return val.isEmpty || val.length < 3 ? "Enter Username 3+ characters" : null;
                     },
                     decoration: textFieldInputDecoration("username"),
                   ),
@@ -92,7 +93,7 @@ class _SignUpState extends State<SignUp> {
                     decoration: textFieldInputDecoration("password"),
                     controller: passwordEditingController,
                     validator:  (val){
-                      return val!.length < 6 ? "Enter Password 6+ characters" : null;
+                      return val.length < 6 ? "Enter Password 6+ characters" : null;
                     },
 
                   ),
