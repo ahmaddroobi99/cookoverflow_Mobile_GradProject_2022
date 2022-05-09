@@ -8,6 +8,8 @@ import 'package:cookoverflow/services/database.dart';
 import 'package:cookoverflow/views/chatroom.dart';
 import 'package:cookoverflow/views/forgetPass.dart';
 import 'package:cookoverflow/widget/widget.dart';
+import 'package:cookoverflow/views/signup.dart';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -46,11 +48,11 @@ class _SignInState extends State<SignIn> {
           QuerySnapshot userInfoSnapshot =
           await DatabaseMethods().getUserInfo(emailEditingController.text);
 
-          HelperFunctions.saveUserLoggedInSharedPreference(true);
-          HelperFunctions.saveUserNameSharedPreference(
-              userInfoSnapshot.documents[0].data["userName"]);
-          HelperFunctions.saveUserEmailSharedPreference(
-              userInfoSnapshot.documents[0].data["userEmail"]);
+          // HelperFunctions.saveUserLoggedInSharedPreference(true);
+          // HelperFunctions.saveUserNameSharedPreference(
+          //     userInfoSnapshot.docs[0].data()["userName"]);
+          // HelperFunctions.saveUserEmailSharedPreference(
+          //     userInfoSnapshot.docs[0].data["userEmail"]);
 
           Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => ChatRoom()));

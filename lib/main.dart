@@ -15,7 +15,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
-  late bool userIsLoggedIn;
+   bool userIsLoggedIn;
 
   @override
   void initState() {
